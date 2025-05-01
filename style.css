@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Background watermark */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('bg-watermark.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f4;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111827cc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffd1;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffd1;
+}
+
+/* Hero section */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-top: 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Sections */
+section {
+  padding: 60px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 20px;
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section h2 {
+  color: #00ffd1;
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111827;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
